@@ -1,15 +1,14 @@
 import React, {useState} from 'react';
 
-const TodoList = () =>{
-    const [todos, setTodods] = useState([])
+const TodoList = ({todos}) =>{
+
   return (
     <div>
-      <h1>To-do list</h1>
-      <input type="text"/>
-      <button>Add T0-do</button>
-      <button>clear completed</button>
-      <p>0 left to-do</p>
+      {todos.map((todo) =>{
+        return <todo todo={todo} key={todo}/>
 
+      })
+    }
     </div>
   )
 }
